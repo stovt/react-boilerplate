@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import { history } from './store/middleware/routerMiddleware';
+import store from './store/createStore';
 import LocaleProvider from './shared/components/Locale';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -8,11 +11,13 @@ import * as serviceWorker from './serviceWorker';
 const renderRoot = document.getElementById('root');
 
 ReactDOM.render(
-  <Router>
-    <LocaleProvider>
-      <App />
-    </LocaleProvider>
-  </Router>,
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <LocaleProvider>
+        <App />
+      </LocaleProvider>
+    </ConnectedRouter>
+  </Provider>,
   renderRoot
 );
 
