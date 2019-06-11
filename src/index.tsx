@@ -1,12 +1,16 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import 'whatwg-fetch';
+import 'typeface-roboto';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
+import { ThemeProvider } from '@material-ui/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import { history } from './store/middleware/routerMiddleware';
 import store from './store/createStore';
+import theme from './styles';
 import LocaleProvider from './shared/components/Locale';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -17,7 +21,10 @@ ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <LocaleProvider>
-        <App />
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <App />
+        </ThemeProvider>
       </LocaleProvider>
     </ConnectedRouter>
   </Provider>,
