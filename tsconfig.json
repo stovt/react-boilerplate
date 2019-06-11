@@ -19,14 +19,12 @@
     "outDir": "./build/",
     "noImplicitAny": true,
     "sourceMap": true,
-    "rootDirs": ["src"],
-    "baseUrl": ".",
-    "paths": {
-      "public/*": ["public/*"],
-      "store/*": ["src/store/*"],
-      "config": ["src/config"],
-      "shared/*": ["src/shared/*"]
-    }
+    "rootDirs": [
+      "src"
+    ],
+    "baseUrl": "src",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src"
