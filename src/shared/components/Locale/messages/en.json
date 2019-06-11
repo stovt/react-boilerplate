@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "home": {
+      "title": "Home page"
+    },
+    "kitchen-sink": {
+      "title": "Kitchen Sink page"
+    }
+  },
+  "actions": {
+    "increment": "UP",
+    "decrement": "DOWN"
+  },
+  "app": {
+    "title": "Welcome to React Boilerplate!",
+    "nav": {
+      "home": "Home",
+      "kitchen-sink": "Kitchen Sink"
+    }
+  }
+}

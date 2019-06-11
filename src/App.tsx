@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route, Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 import { ROUTES } from 'shared/constants';
 import Loading from 'shared/components/Loading';
 
@@ -12,10 +13,17 @@ const App: React.FC = () => {
   return (
     <div>
       <header>
-        <h1>Welcome to React Boilerplate!</h1>
+        <h1>
+          <FormattedMessage id='app.title' />
+        </h1>
       </header>
       <div>
-        <Link to={ROUTES.HOME}>Home</Link> <Link to={ROUTES.KITCHEN_SINK}>Kitchen Sink</Link>
+        <Link to={ROUTES.HOME}>
+          <FormattedMessage id='app.nav.home' />
+        </Link>{' '}
+        <Link to={ROUTES.KITCHEN_SINK}>
+          <FormattedMessage id='app.nav.kitchen-sink' />
+        </Link>
       </div>
       <React.Suspense fallback={<Loading />}>
         <Switch>
