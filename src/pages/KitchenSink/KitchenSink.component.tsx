@@ -1,17 +1,16 @@
 import * as React from 'react';
 import { Row, Col } from 'react-styled-flexboxgrid';
 import { FormattedMessage } from 'react-intl';
-import { Counter, Processing, KitchenSinkAction } from 'shared/types/kitchenSink';
 import StyledButton from './Button';
+import { useIncrementDispatch, useDecrementDispatch } from './KitchenSink.actions';
+import { useCounterSelector, useProcessingSelector } from './KitchenSink.selectors';
 
-interface KitchenSinkProps {
-  counter: Counter;
-  processing: Processing;
-  increment: () => KitchenSinkAction;
-  decrement: () => KitchenSinkAction;
-}
+const KitchenSink: React.FC = () => {
+  const increment = useIncrementDispatch();
+  const decrement = useDecrementDispatch();
+  const counter = useCounterSelector();
+  const processing = useProcessingSelector();
 
-const KitchenSink: React.FC<KitchenSinkProps> = ({ counter, processing, increment, decrement }) => {
   const handleIncrement = React.useCallback(() => increment(), [increment]);
   const handleDecrement = React.useCallback(() => decrement(), [decrement]);
 
