@@ -1,4 +1,6 @@
+import { useSelector } from 'react-redux';
 import { State } from 'shared/types';
 
-export const counterSelector = (state: State) => state.kitchenSink.counter;
-export const processingSelector = (state: State) => state.kitchenSink.processing;
+export const useCounterSelector = () => useSelector((state: State) => state.kitchenSink.counter);
+export const useProcessingSelector = () =>
+  useSelector((state: State) => state.kitchenSink.processing);

@@ -4,7 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { colors } from 'styles';
-import { Counter, Processing, KitchenSinkAction } from 'shared/types/kitchenSink';
+import { useIncrementDispatch, useDecrementDispatch } from './KitchenSink.actions';
+import { useCounterSelector, useProcessingSelector } from './KitchenSink.selectors';
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -21,14 +22,12 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-interface KitchenSinkProps {
-  counter: Counter;
-  processing: Processing;
-  increment: () => KitchenSinkAction;
-  decrement: () => KitchenSinkAction;
-}
+const KitchenSink: React.FC = () => {
+  const increment = useIncrementDispatch();
+  const decrement = useDecrementDispatch();
+  const counter = useCounterSelector();
+  const processing = useProcessingSelector();
 
-const KitchenSink: React.FC<KitchenSinkProps> = ({ counter, processing, increment, decrement }) => {
   const handleIncrement = React.useCallback(() => increment(), [increment]);
   const handleDecrement = React.useCallback(() => decrement(), [decrement]);
 
