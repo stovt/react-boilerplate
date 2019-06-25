@@ -4,6 +4,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { colors } from 'styles';
+import useInjectSaga from 'shared/hooks/useInjectSaga';
+import sagas from './KitchenSink.sagas';
 import { useIncrementDispatch, useDecrementDispatch } from './KitchenSink.actions';
 import { useCounterSelector, useProcessingSelector } from './KitchenSink.selectors';
 
@@ -23,6 +25,8 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const KitchenSink: React.FC = () => {
+  useInjectSaga(sagas);
+
   const increment = useIncrementDispatch();
   const decrement = useDecrementDispatch();
   const counter = useCounterSelector();
