@@ -1,9 +1,13 @@
 import * as React from 'react';
 import { FormattedMessage } from 'react-intl';
+import useInjectSaga from 'shared/hooks/useInjectSaga';
+import sagas from './KitchenSink.sagas';
 import { useIncrementDispatch, useDecrementDispatch } from './KitchenSink.actions';
 import { useCounterSelector, useProcessingSelector } from './KitchenSink.selectors';
 
 const KitchenSink: React.FC = () => {
+  useInjectSaga(sagas);
+
   const increment = useIncrementDispatch();
   const decrement = useDecrementDispatch();
   const counter = useCounterSelector();
