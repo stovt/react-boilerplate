@@ -17,7 +17,7 @@
     "redux": "^4.0.1",
     "redux-saga": "^1.0.3",
     "regenerator-runtime": "^0.13.2",
-    "typeface-roboto": "^0.0.54",
+    "typeface-roboto": "^0.0.75",
     "whatwg-fetch": "^3.0.0"
   },
   "scripts": {
