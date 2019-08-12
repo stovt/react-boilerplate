@@ -1,11 +1,8 @@
 import * as React from 'react';
-import { IntlProvider, addLocaleData } from 'react-intl';
-import localeEn from 'react-intl/locale-data/en';
+import { IntlProvider } from 'react-intl'; // Add locale data for de
 import en from './messages/en.json';
 import { flattenMessages } from './Locale.helpers';
 import { DEFAULT_LOCALE } from './Locale.constants';
-
-addLocaleData([...localeEn]);
 
 const locales: Record<string, {}> = { en };
 
@@ -21,7 +18,7 @@ const messages = flattenMessages(locales[locale]);
 
 const Locale: React.FC = ({ children }) => (
   <IntlProvider locale={locale} messages={messages}>
-    <React.Fragment>{children}</React.Fragment>
+    <>{children}</>
   </IntlProvider>
 );
 
