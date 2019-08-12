@@ -1,4 +1,4 @@
-import { createMuiTheme, Theme } from '@material-ui/core/styles';
+import { createMuiTheme, Theme } from '@material-ui/core';
 import { Spacing } from '@material-ui/core/styles/createSpacing';
 import * as colors from './colors';
 import * as fonts from './fonts';
