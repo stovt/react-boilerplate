@@ -2,20 +2,6 @@
   "name": "react-boilerplate",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "connected-react-router": "^6.4.0",
-    "core-js": "^3.1.3",
-    "history": "^4.9.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-intl": "^3.1.1",
-    "react-redux": "^7.1.0",
-    "react-router-dom": "^5.0.1",
-    "redux": "^4.0.1",
-    "redux-saga": "^1.0.3",
-    "regenerator-runtime": "^0.13.2",
-    "whatwg-fetch": "^3.0.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "prebuild": "rimraf build/",
@@ -45,6 +31,20 @@
       "last 1 safari version"
     ]
   },
+  "dependencies": {
+    "connected-react-router": "^6.4.0",
+    "core-js": "^3.1.3",
+    "history": "^4.9.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-intl": "^3.1.1",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.3",
+    "regenerator-runtime": "^0.13.2",
+    "whatwg-fetch": "^3.0.0"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.13",
     "@types/node": "^12.0.7",
@@ -55,7 +55,7 @@
     "@types/react-router-dom": "^5.1.0",
     "eslint-config-airbnb": "^18.0.0",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.1.0",
@@ -64,7 +64,7 @@
     "husky": "^3.0.0",
     "lint-staged": "^9.1.0",
     "prettier": "^1.18.2",
-    "react-scripts": "3.1.1",
+    "react-scripts": "3.2.0",
     "rimraf": "^3.0.0",
     "typescript": "^3.5.1"
   }
