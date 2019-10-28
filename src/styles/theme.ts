@@ -1,5 +1,4 @@
 import { createMuiTheme, Theme } from '@material-ui/core';
-import { Spacing } from '@material-ui/core/styles/createSpacing';
 import * as colors from './colors';
 import * as fonts from './fonts';
 
@@ -12,7 +11,7 @@ interface GetThemeOptions {
 export const getTheme = (options: GetThemeOptions = {}): Theme =>
   createMuiTheme({
     /* 'factor' is a number and result is string */
-    spacing: ((factor: number) => `${(8 / fonts.HTML_FONT_SIZE) * factor}rem` as any) as Spacing,
+    spacing: (factor: number) => `${(8 / fonts.HTML_FONT_SIZE) * factor}rem`,
     palette: {
       type: options.darkMode ? PALETTE_TYPE_DARK : PALETTE_TYPE_LIGHT,
       background: {
