@@ -2,23 +2,6 @@
   "name": "react-boilerplate",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.1.0",
-    "@material-ui/icons": "^4.1.0",
-    "connected-react-router": "^6.4.0",
-    "core-js": "^3.1.3",
-    "history": "^4.9.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-intl": "^3.1.6",
-    "react-redux": "^7.1.0",
-    "react-router-dom": "^5.0.1",
-    "redux": "^4.0.1",
-    "redux-saga": "^1.0.3",
-    "regenerator-runtime": "^0.13.2",
-    "typeface-roboto": "^0.0.75",
-    "whatwg-fetch": "^3.0.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "prebuild": "rimraf build/",
@@ -47,6 +30,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.1.0",
+    "@material-ui/icons": "^4.1.0",
+    "connected-react-router": "^6.4.0",
+    "core-js": "^3.1.3",
+    "history": "^4.9.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-intl": "^3.1.6",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.3",
+    "regenerator-runtime": "^0.13.2",
+    "typeface-roboto": "^0.0.75",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
