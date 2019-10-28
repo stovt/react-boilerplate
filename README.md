@@ -2,7 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Includes:
+### The repo contains 3 branches:
+
+- [*`master`*](https://github.com/stovt/react-boilerplate)
+- [*`with-styled-components`*](https://github.com/stovt/react-boilerplate/tree/with-styled-components)
+- [*`with-material-ui`* ](https://github.com/stovt/react-boilerplate/tree/with-material-ui)
+
+## `master` branch includes:
 * [React](https://reactjs.org/)
 * [Redux](https://github.com/reduxjs/redux)
 * [React Redux](https://github.com/reduxjs/react-redux)
@@ -16,6 +22,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * [Prettier](https://github.com/prettier/prettier)
 * [Typescript](https://www.typescriptlang.org/docs/home.html)
 
+## `with-styled-components` branch includes `master` and:
+* [styled-components](https://www.styled-components.com/)
+* [react-styled-flexboxgrid](https://github.com/LoicMahieu/react-styled-flexboxgrid)
+* [stylelint](https://github.com/stylelint/stylelint)
+
+## `with-material-ui` branch includes `master` and:
+* [Material-UI](https://material-ui.com/)
 
 ## Development server
 
