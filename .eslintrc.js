@@ -33,7 +33,17 @@ module.exports =  {
     'react/destructuring-assignment': ['off'],
     'react/jsx-one-expression-per-line': ['off'],
     'function-paren-newline': 'off',
-    'react/no-array-index-key': 'off'
+    'react/no-array-index-key': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        'js': 'never',
+        'jsx': 'never',
+        'ts': 'never',
+        'tsx': 'never'
+      }
+    ]
   },
   env: {
     browser: true,
