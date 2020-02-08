@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,
     "esModuleInterop": true,
     "strict": true,
@@ -19,14 +15,10 @@
     "outDir": "./build/",
     "noImplicitAny": true,
     "sourceMap": true,
-    "rootDirs": [
-      "src"
-    ],
+    "rootDirs": ["src"],
     "baseUrl": "src",
     "allowJs": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
